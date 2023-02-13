@@ -1,4 +1,4 @@
-QUERY BASE
+QUERY SELECT
 
 1. Selezionare tutti gli studenti nati nel 1990 (160) =
 SELECT *
@@ -45,6 +45,10 @@ WHERE `phone` IS NULL;
 QUERY GROUP BY
 
 1. Contare quanti iscritti ci sono stati ogni anno =
+SELECT COUNT(*) AS num_studenti, 
+YEAR(`enrolment_date`) AS anno_iscrizione 
+FROM `students` 
+GROUP BY anno_iscrizione;
 
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio =
 
